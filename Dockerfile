@@ -3,10 +3,10 @@ FROM ubuntu:16.04
 MAINTAINER Chris Kretler <ckretler@umich.edu>
 
 RUN apt-get update \
-	&& apt-get install -y python python-pip host \
+	&& apt-get install -y python python-pip host iputils-ping \
 	&& pip install requests
 	
-RUN apt-get install net-tools iputils-ping
+RUN apt-get install net-tools
 
 WORKDIR /app/
 
